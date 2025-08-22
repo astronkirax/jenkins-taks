@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Job1 - Run star.py') {
+            steps {
+                echo "Starting Job1"
+                sh 'python3 star.py'
+            }
+        }
+
+        stage('Job2 - Run hello.py') {
+            steps {
+                echo "Starting Job2"
+                sh 'python3 hello.py'
+            }
+        }
+
+        stage('Job3 - Run bye.py') {
+            steps {
+                echo "Starting Job3"
+                sh 'python3 bye.py'
+            }
+        }
+    }
+}
